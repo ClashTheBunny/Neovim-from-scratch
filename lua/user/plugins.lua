@@ -51,17 +51,32 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  -- use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "goolord/alpha-nvim"
+  -- use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
+  -- use "folke/which-key.nvim"
+  use 'jeetsukumaran/vim-indentwise' -- Indent-based movement   
+  use 'jlanzarotta/bufexplorer' -- Easily switch between buffers
+
+  -- Vimux and testing support                                                
+  use "preservim/vimux" -- vim-tmux integration, for things like running tests
+  use "vim-test/vim-test"
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use "lifepillar/vim-solarized8"
+  use "NLKNguyen/papercolor-theme"     
+  use "owickstrom/vim-colors-paramount"
+  use "preservim/vim-colors-pencil"    
+  use "tomasr/molokai"    
+  use "joshdick/onedark.vim"    
+  use "artanikin/vim-synthwave84"    
+  use "TroyFletcher/vim-colors-synthwave"    
+  use {'sonph/onehalf', rtp = 'vim/'}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -83,6 +98,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "mileszs/ack.vim"
 
   -- Treesitter
   use {
@@ -93,6 +109,9 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
+  use "pgr0ss/vim-github-url"
+  use 'tpope/vim-unimpaired'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
