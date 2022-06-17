@@ -71,6 +71,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment').toggle()<CR>", opts)
 keymap("v", "<leader>/", ":lua require(\"Comment.api\").gc(vim.fn.visualmode())<cr>", opts)
 
+keymap("n", "<leader>cc", "<Plug>(comment_toggle_current_linewise)", opts)
+keymap("v", "<leader>cc", "<Plug>(comment_toggle_linewise_visual)", opts)
+
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
