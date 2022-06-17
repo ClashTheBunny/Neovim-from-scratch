@@ -19,3 +19,10 @@ require "user.indentline"
 -- require "user.alpha"
 -- require "user.whichkey"
 require "user.autocommands"
+
+vim.api.nvim_exec(
+[[
+if filereadable(expand("~/.vimrc"))
+  source ~/.vimrc
+endif
+]], false)
