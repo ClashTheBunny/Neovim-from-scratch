@@ -10,7 +10,10 @@ local diagnostics = null_ls.builtins.diagnostics
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
 local code_actions = null_ls.builtins.code_actions
 
-local local_sources = { "tricorder" }
+local local_sources = {
+  -- "tricorder",
+  "tricorder-fast",
+}
 local local_source_objects = {}
 
 for _, local_source in pairs(local_sources) do

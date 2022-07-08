@@ -44,3 +44,4 @@ plugin/packer_compiled.lua
 
 lua/user/lsp/settings/ciderlsp.lua
 lua/user/lsp/settings/tricorder.lua
+lua/user/lsp/settings/tricorder-fast.lua
