@@ -48,7 +48,10 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
+  use {
+    "akinsho/bufferline.nvim",
+    branch = "main",
+  }
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   -- use "akinsho/toggleterm.nvim"
@@ -114,6 +117,13 @@ return packer.startup(function(use)
   use "tpope/vim-fugitive"
   use "pgr0ss/vim-github-url"
   use 'tpope/vim-unimpaired'
+
+  -- GhostText --
+  use {
+    'raghur/vim-ghost', 
+    run = ':GhostInstall'
+  }
+  use {"ellisonleao/glow.nvim", branch = 'main'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
