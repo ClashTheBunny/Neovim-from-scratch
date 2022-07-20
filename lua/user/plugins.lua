@@ -115,6 +115,8 @@ return packer.startup(function(use)
   use "tpope/vim-fugitive"
   use "pgr0ss/vim-github-url"
   use 'tpope/vim-unimpaired'
+  use "jlfwong/vim-mercenary"
+  use "mhinz/vim-signify"
 
   -- GhostText --
   use {
