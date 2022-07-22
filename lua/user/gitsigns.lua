@@ -3,6 +3,13 @@ if not status_ok then
   return
 end
 
+vim.api.nvim_exec(
+  [[
+  " let g:signify_disable_by_default = 0
+  " let g:signify_sign_add = "▎"
+  let g:signify_skip = { 'vcs': { 'deny': ['git'] } }
+]] , false)
+
 gitsigns.setup {
   signs = {
     add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
