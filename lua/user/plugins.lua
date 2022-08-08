@@ -59,10 +59,10 @@ return packer.startup(function(use)
 	-- use("folke/which-key.nvim")
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use 'jeetsukumaran/vim-indentwise' -- Indent-based movement   
+  use 'jeetsukumaran/vim-indentwise' -- Indent-based movement
   use 'jlanzarotta/bufexplorer' -- Easily switch between buffers
 
-  -- Vimux and testing support                                                
+  -- Vimux and testing support
   use "preservim/vimux" -- vim-tmux integration, for things like running tests
   use "vim-test/vim-test"
 
@@ -71,13 +71,13 @@ return packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lifepillar/vim-solarized8"
-  use "NLKNguyen/papercolor-theme"     
+  use "NLKNguyen/papercolor-theme"
   use "owickstrom/vim-colors-paramount"
-  use "preservim/vim-colors-pencil"    
-  use "tomasr/molokai"    
-  use "joshdick/onedark.vim"    
-  use "artanikin/vim-synthwave84"    
-  use "TroyFletcher/vim-colors-synthwave"    
+  use "preservim/vim-colors-pencil"
+  use "tomasr/molokai"
+  use "joshdick/onedark.vim"
+  use "artanikin/vim-synthwave84"
+  use "TroyFletcher/vim-colors-synthwave"
   use {'sonph/onehalf', rtp = 'vim/'}
 
 	-- cmp plugins
@@ -120,7 +120,7 @@ return packer.startup(function(use)
 
   -- GhostText --
   use {
-    'raghur/vim-ghost', 
+    'raghur/vim-ghost',
     run = ':GhostInstall'
   }
   use {"ellisonleao/glow.nvim", branch = 'main'}
