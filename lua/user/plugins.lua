@@ -69,16 +69,24 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
 	use("lunarvim/darkplus.nvim")
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lifepillar/vim-solarized8"
-  use "NLKNguyen/papercolor-theme"
-  use "owickstrom/vim-colors-paramount"
-  use "preservim/vim-colors-pencil"
-  use "tomasr/molokai"
-  use "joshdick/onedark.vim"
-  use "artanikin/vim-synthwave84"
-  use "TroyFletcher/vim-colors-synthwave"
-  use {'sonph/onehalf', rtp = 'vim/'}
+  use ({ "lunarvim/colorschemes" }) -- A bunch of colorschemes you can try out
+  use ({ "lifepillar/vim-solarized8" })
+  use ({ "NLKNguyen/papercolor-theme" })
+  use ({ "owickstrom/vim-colors-paramount" })
+  use ({ "preservim/vim-colors-pencil" })
+  use ({ "tomasr/molokai" })
+  use ({ "sickill/vim-monokai" })
+  use ({ "joshdick/onedark.vim" })
+  use ({ "artanikin/vim-synthwave84" })
+  use ({ "TroyFletcher/vim-colors-synthwave" })
+  use {
+    "sonph/onehalf",
+    rtp = "vim",
+    -- config = function()
+    --   vim.cmd [[colorscheme onehalfdark]]
+    -- end,
+    -- event = "VimEnter",
+  }
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
