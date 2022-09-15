@@ -15,6 +15,7 @@ local local_sources = {
   "tricorder-fast",
 }
 local local_source_objects = {}
+local local_sources_missing = {}
 
 for _, local_source in pairs(local_sources) do
 	local loaded, local_source_object = pcall(require, "user.lsp.settings." .. local_source)
@@ -22,12 +23,12 @@ for _, local_source in pairs(local_sources) do
 		table.insert(local_source_objects, local_source_object)
 	else
 		print(local_source .. " doesn't exist.")
+		table.insert(local_sources_missing, local_source)
 	end
 end
 
 local sources = {
 	formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-	formatting.black.with({ extra_args = { "--fast" } }),
 	formatting.stylua,
 	formatting.puppet_lint,
 	diagnostics.shellcheck,
@@ -39,6 +40,10 @@ local sources = {
 	code_actions.refactoring,
 	code_actions.proselint,
 }
+
+if table.contains(local_sources_missing, "tricorder") then
+	table.insert(sources,formatting.black.with({ extra_args = { "--fast" } }))
+end
 
 for _, v in ipairs(local_source_objects) do
 	table.insert(sources, v)
