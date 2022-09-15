@@ -57,14 +57,14 @@ return packer.startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	-- use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 	-- use("folke/which-key.nvim")
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use 'jeetsukumaran/vim-indentwise' -- Indent-based movement
-  use 'jlanzarotta/bufexplorer' -- Easily switch between buffers
+  use ({ "nvim-lua/popup.nvim" }) -- An implementation of the Popup API from vim in Neovim
+  use ({ "antoinemadec/FixCursorHold.nvim" }) -- This is needed to fix lsp doc highlight
+  use ({ "jeetsukumaran/vim-indentwise" }) -- Indent-based movement
+  -- use ({ "jlanzarotta/bufexplorer" }) -- Easily switch between buffers
 
   -- Vimux and testing support
-  use "preservim/vimux" -- vim-tmux integration, for things like running tests
-  use "vim-test/vim-test"
+  use ({ "preservim/vimux" }) -- vim-tmux integration, for things like running tests
+  use ({ "vim-test/vim-test" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
@@ -92,9 +92,9 @@ return packer.startup(function(use)
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }) -- buffer completions
 	use({ "hrsh7th/cmp-path", commit = "466b6b8270f7ba89abd59f402c73f63c7331ff6e" }) -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "hrsh7th/vim-vsnip"
-  use "hrsh7th/vim-vsnip-integ"
+  use ({ "hrsh7th/cmp-cmdline" }) -- cmdline completions
+  use ({ "hrsh7th/vim-vsnip" })
+  use ({ "hrsh7th/vim-vsnip-integ" })
 	use({ "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" })
 	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
@@ -108,8 +108,10 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
-  use "mileszs/ack.vim"
+  use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+  use({ "nvim-telescope/telescope-ui-select.nvim" })
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = 'make' })
+  use ({ "mileszs/ack.vim" })
 
 	-- Treesitter and other syntax highlighting
 	use({
@@ -120,11 +122,11 @@ return packer.startup(function(use)
 
   -- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
-  use "tpope/vim-fugitive"
-  use "pgr0ss/vim-github-url"
-  use 'tpope/vim-unimpaired'
-  use "jlfwong/vim-mercenary"
-  use "mhinz/vim-signify"
+  use ({ "tpope/vim-fugitive" })
+  use ({ "pgr0ss/vim-github-url" })
+  use ({ "tpope/vim-unimpaired" })
+  use ({ "jlfwong/vim-mercenary" })
+  use ({ "mhinz/vim-signify" })
 
   -- GhostText --
   use {
