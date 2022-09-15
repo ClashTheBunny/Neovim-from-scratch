@@ -5,6 +5,9 @@ end
 
 local actions = require "telescope.actions"
 
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('ui-select')
+
 telescope.setup {
   defaults = {
 
@@ -87,10 +90,14 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
+    ['fzf'] = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = 'smart_case',
+    },
+    ['ui-select'] = {
+      require('telescope.themes').get_dropdown({})
+    }
   },
 }
