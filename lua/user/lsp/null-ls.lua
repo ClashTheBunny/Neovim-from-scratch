@@ -22,7 +22,6 @@ for _, local_source in pairs(local_sources) do
 	if loaded then
 		table.insert(local_source_objects, local_source_object)
 	else
-		print(local_source .. " doesn't exist.")
 		table.insert(local_sources_missing, local_source)
 	end
 end
