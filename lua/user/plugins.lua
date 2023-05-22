@@ -111,6 +111,7 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
   use({ "nvim-telescope/telescope-ui-select.nvim" })
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = 'make' })
+  use({ "axkirillov/easypick.nvim", commit = "3f6af7b34eca30b81a8090ea6e5aa56212f8e746" })
   use ({ "mileszs/ack.vim" })
 
 	-- Treesitter and other syntax highlighting

@@ -1,5 +1,7 @@
 local opts = { noremap = true, silent = true }
 
+local expr_opts = { noremap = true, silent = true, expr = true }
+
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -76,6 +78,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>nf", ":NvimTreeFindFile<cr>", opts)
 
+keymap("n", "<leader>gu", "<cmd>lua _G.Toggle_Gutter()<cr>", opts)
 -- Telescope
 keymap("n", "<leader>FD", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = true }))<cr>", opts)
 keymap("n", "<leader>FF", "<cmd>Telescope find_files hidden=true<cr>", opts)
@@ -84,6 +87,7 @@ keymap("n", "<leader>FG", "<cmd>Telescope live_grep hidden=true<cr>", opts)
 keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>Easypick hg_changed_files<cr>", opts)
 keymap("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Vimux testing
