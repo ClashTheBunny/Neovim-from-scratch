@@ -92,6 +92,10 @@ if not status_ok then
   return
 end
 
-M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+if vim.fn.has('nvim-0.8') == 1 then
+  M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+else
+  M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+end
 
 return M
